@@ -1,12 +1,12 @@
-import org.junit.Test;
-import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class MainClassTest {
     @Test
-    public void testGetLocalNumber() {
+    public void testGetClassNumber() {
         MainClass mainClass = new MainClass();
-        int expectedValue = 14;
-        int actualValue = mainClass.getLocalNumber();
-        Assertions.assertEquals(expectedValue, actualValue, "Метод должен возвращать 14");
+        int r = mainClass.getClassNumber();
+
+        assertTrue(r > 45, "Метод должен возвращать число больше 45");
     }
 }
