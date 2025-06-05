@@ -3,10 +3,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class MainClassTest {
     @Test
-    public void testGetClassNumber() {
+    public void testGetClassString() {
         MainClass mainClass = new MainClass();
-        int r = mainClass.getClassNumber();
+        String r = mainClass.getClassString();
 
-        assertTrue(r > 45, "Метод должен возвращать число больше 45");
+        assertTrue(r.contains("hello") || r.contains("Hello"),
+                "Строка должна содержать hello");
     }
 }
